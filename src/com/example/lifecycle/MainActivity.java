@@ -1,0 +1,63 @@
+package com.example.lifecycle;
+
+import android.R;
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+
+public class MainActivity extends Activity {
+  private static final String TAG = "LifeCycle";
+  
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		Log.v(TAG,"onCreate is called.");
+		setContentView(R.layout.activity_main);
+	}
+	@Override
+	protected void onstart() {
+		// TODO 自動作成されたメソッド・スタブ
+		super.onRestart();
+		Log.v(TAG, "onstart is called.");
+	}
+	@Override
+	protected void onRestart() {
+		// TODO 自動作成されたメソッド・スタブ
+		super.onRestart();
+		Log.v(TAG, "onRestart is called.");
+	}
+    @Override
+	protected void onStart() {
+		// TODO 自動生成されたメソッド・スタブ
+		super.onStart();
+	}
+	@Override
+	protected void onStop() {
+		// TODO 自動生成されたメソッド・スタブ
+		super.onStop();
+	}
+	@Override
+    protected void onResume() {
+	// TODO 自動作成されたメソッド・スタブ
+	super.onResume();
+	Log.v(TAG, "onResume is called.");
+    }
+	@Override
+	protected void onPause() {
+		// TODO 自動作成されたメソッド・スタブ
+		super.onRause();
+		Log.v(TAG, "onRause is called.");
+	}
+	@Override
+	protected void onstop() {
+		// TODO 自動作成されたメソッド・スタブ
+		super.onstop();
+		Log.v(TAG, "onStop is called.");
+	}
+	@Override
+	protected void onDestroy() {
+		// TODO 自動作成されたメソッド・スタブ
+		super.onDestroy();
+		Log.v(TAG, "onDestroy is called.");
+    }
+}
